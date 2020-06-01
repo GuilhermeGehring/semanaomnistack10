@@ -11,6 +11,8 @@ module.exports = {
 
     async store (request, response) {
         const { github_username, techs, latitude, longitude } = request.body
+
+        return response.json(github_username)
         
         let dev = await Dev.findOne({ github_username })
 
